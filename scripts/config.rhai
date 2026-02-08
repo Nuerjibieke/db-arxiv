@@ -1,84 +1,28 @@
-// ==================== Original Keywords ====================
 let titles_type = ["Dataset", "Survey", "Review", "Overview"];
 let titles_model = ["BERT", "GPT", "Transformer"];
 let titles_method = ["Pre-train", "Pretrain", "Prompt", "Self-Supervised"];
+let titles =  titles_model + titles_method + titles_type;
+let authors_array = ["Yann LeCun", "Geoffrey Hinton", "Yoshua Bengio"];
 
-// ==================== Database Research Keywords ====================
-// AI Native Database & Agent Database
-let titles_ai_db = [
-    "AI Native", "AI-Native", "Agent", "LLM", "ChatGPT",
-    "Text-to-SQL", "Text2SQL", "NL2SQL", "Natural Language to SQL",
-    "Learned Index", "Learned Optimizer", "Learned Query", "Cardinality Estimation",
-    "Vector Database", "Vector Search", "Embedding", "RAG", "Retrieval-Augmented",
-    "Foundation Model", "Large Language Model", "In-Context Learning"
-];
-
-// Database Core Tech Keywords
-let titles_db_core = [
-    "Query Optimization", "Query Processing", "Query Plan", "Cost Model",
-    "Transaction", "ACID", "Concurrency Control", "MVCC", "Isolation",
-    "Index", "B-Tree", "LSM-Tree", "Hash Index", "Bitmap Index",
-    "Storage Engine", "Buffer Pool", "Buffer Management", "WAL",
-    "Distributed Database", "Sharding", "Replication", "Consensus", "Raft", "Paxos"
-];
-
-// Emerging Database Tech
-let titles_emerging = [
-    "HTAP", "NewSQL", "NoSQL", "Time Series", "Graph Database", "Knowledge Graph",
-    "Streaming", "Real-time", "In-Memory", "Serverless", "Cloud-Native",
-    "Data Lake", "Lakehouse", "Data Warehouse", "OLAP", "OLTP",
-    "Benchmark", "TPC"
-];
-
-let titles = titles_model + titles_method + titles_type + titles_ai_db + titles_db_core + titles_emerging;
-
-// ==================== Authors: Original + Database Experts ====================
-let authors_array = [
-    // Original: AI Leaders
-    "Yann LeCun", "Geoffrey Hinton", "Yoshua Bengio",
-    
-    // Database Turing Award Winners & Pioneers
-    "Michael Stonebraker", "Jim Gray", "David DeWitt", "Hector Garcia-Molina",
-    "Michael J. Carey", "Jeffrey D. Ullman", "Raghu Ramakrishnan",
-    
-    // Database Systems - Academic Leaders
-    "Samuel Madden", "Tim Kraska", "Andy Pavlo", "Anastasia Ailamaki",
-    "Jignesh Patel", "Arun Kumar", "Immanuel Trummer", "Stratos Idreos",
-    "Thomas Neumann", "Viktor Leis", "Peter Boncz", "Guoliang Li",
-    "Feifei Li", "Lei Chen", "Xiaofang Zhou", "Wenfei Fan",
-    
-    // Query Optimization & Learned Database
-    "Guy Lohman", "Surajit Chaudhuri", "Vivek Narasayya", "Bolin Ding",
-    "Ce Zhang", "Carsten Binnig", "Volker Markl", "Tilmann Rabl",
-    
-    // AI + Database Cross-domain
-    "Ion Stoica", "Matei Zaharia", "Joseph Gonzalez", "Alvin Cheung",
-    "Xin Luna Dong", "Jiawei Han", "Haixun Wang", "Wei Wang"
-];
-
-// ==================== Conferences: Original + Database Top Venues ====================
 let conferences = [
     // AI
     "AAAI", "AAMAS", "ACM MM", "AISTATS", "ALT", "CEC", "ECAI", "FUZZ IEEE", "GECCO", "ICANN", "ICAPS", "ICCBR", "ICONIP", "ICRA", "ICTAI", "IJCAI", "IJCNN", "IROS", "KR", "KSEM", "SIGGRAPH", "STOC", "UAI", "PPSN", "PRICAI", "TAAI",
     // CV
-    "3DV", "ACCV", "BMVC", "CVPR", "ECCV", "ICCV", "ICDAR", "ICIP", "ICME", "ICPR", "IEEE VIS", "MICCAI", "WACV",
-    // DM (includes most database conferences)
+    "3DV", "ACCV", "ACM MM", "BMVC", "CVPR", "ECCV", "ICCV", "ICDAR", "ICIP", "ICME", "ICPR", "IEEE VIS", "MICCAI", "SIGGRAPH", "WACV",
+    // DM
     "AKBC", "APWeb", "CIKM", "DASFAA", "ECML-PKDD", "ICDE", "ICDM", "ICDT", "KDD", "LREC", "MDM", "PAKDD", "PODS", "RecSys", "SDM", "SIGMOD", "VLDB", "WSDM", "WWW", "EDBT", "CIDR",
     // IR
     "ECIR", "ESWC", "ICMR", "ICTIR", "ISWC", "SIGIR",
     // ML
-    "ACML", "ECML", "ICLR", "ICML", "ML4H", "NeurIPS", "NIPS",
+    "ACML", "AISTATS", "ECML", "ICLR", "ICML", "ML4H", "NeurIPS", "NIPS", "UAI",
     // NLP
-    "AACL", "ACL", "CCL", "COLING", "COLT", "CoNLL", "EACL", "EMNLP", "ICASSP", "INTERSPEECH", "NAACL", "NLPCC", "RepL4NLP", "SIGDIAL", "SemEval", "WANLP", "WASSA", "WOAH",
+    "AACL", "ACL", "CCL", "COLING", "COLT", "CoNLL", "EACL", "EMNLP", "ICASSP", "ICDAR", "ICONIP", "INTERSPEECH", "LREC", "NAACL", "NLPCC", "RepL4NLP", "SIGDIAL", "SemEval", "WANLP", "WASSA", "WOAH",
     // Arch
     "ASPLOS", "ATC", "DATE", "EuroSys", "FAST", "HPCA", "ISCA", "MICRO", "PPoPP", "SC", "SoCC",
     // System
     "FSE/ESEC", "ICSE", "ISSTA", "OSDI", "SOSP",
     // Security
-    "ACSA", "AsiaCCS", "CCS", "DSN", "ESORICS", "EuroS&P", "ICICS", "NDSS", "RAID", "SP", "USENIX Security",
-    
-    // Database Top Journals
-    "TODS", "VLDB Journal", "TKDE", "SIGMOD Record"
+    "ACSA", "AsiaCCS", "CCS", "DSN", "ESORICS", "EuroS&P", "ICICS", "NDSS", "RAID", "SP", "USENIX Security"
 ];
 
 let start = conferences.shift();
