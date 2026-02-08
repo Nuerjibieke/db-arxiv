@@ -1,6 +1,6 @@
 site_title = "MyArxiv"
 limit_days = 30
-cache_url = "https://Nuerjibieke.github.io/db-arxiv/cache.json"
+cache_url = "https://Nuerjibieke.github.io/db-arxiv/cache_v2.json"
 
 # ==================== 原有领域 ====================
 [[sources]]
