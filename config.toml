@@ -45,7 +45,7 @@ category = "cs.DC"
 title = "Distributed Computing"
 
 [[sources]]
-limit = 2000
+limit = 1000
 category = "cs.AI AND (ti:agent OR ti:agents OR abs:agent OR abs:agents)"
 title = "AI Agents (Experimental)"
 
