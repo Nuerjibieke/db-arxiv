@@ -1,10 +1,10 @@
 site_title = "MyArxiv"
-limit_days = 7
+limit_days = 30
 cache_url = "https://Nuerjibieke.github.io/db-arxiv/cache.json"
 
 # ==================== 原有领域 ====================
 [[sources]]
-limit = 150
+limit = 300
 category = "cs.CL"
 title = "Computation and Language"
 
