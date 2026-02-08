@@ -44,6 +44,11 @@ limit = 300
 category = "cs.DC"
 title = "Distributed Computing"
 
+[[sources]]
+limit = 300
+category = "cs.AI AND (ti:agent OR ti:agents OR abs:agent OR abs:agents)"
+title = "AI Agents (Experimental)"
+
 [scripts]
 highlight_title = "scripts/highlight_title.rhai"
 highlight_author = "scripts/highlight_author.rhai"
