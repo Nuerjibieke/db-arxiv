@@ -1,9 +1,9 @@
-// ==================== 原有关键词配置 ====================
+// ==================== Original Keywords ====================
 let titles_type = ["Dataset", "Survey", "Review", "Overview"];
 let titles_model = ["BERT", "GPT", "Transformer"];
 let titles_method = ["Pre-train", "Pretrain", "Prompt", "Self-Supervised"];
 
-// ==================== 新增：数据库研究关键词 ====================
+// ==================== Database Research Keywords ====================
 // AI Native Database & Agent Database
 let titles_ai_db = [
     "AI Native", "AI-Native", "Agent", "LLM", "ChatGPT",
@@ -13,7 +13,7 @@ let titles_ai_db = [
     "Foundation Model", "Large Language Model", "In-Context Learning"
 ];
 
-// 数据库核心技术关键词
+// Database Core Tech Keywords
 let titles_db_core = [
     "Query Optimization", "Query Processing", "Query Plan", "Cost Model",
     "Transaction", "ACID", "Concurrency Control", "MVCC", "Isolation",
@@ -22,7 +22,7 @@ let titles_db_core = [
     "Distributed Database", "Sharding", "Replication", "Consensus", "Raft", "Paxos"
 ];
 
-// 新兴数据库技术
+// Emerging Database Tech
 let titles_emerging = [
     "HTAP", "NewSQL", "NoSQL", "Time Series", "Graph Database", "Knowledge Graph",
     "Streaming", "Real-time", "In-Memory", "Serverless", "Cloud-Native",
@@ -32,40 +32,37 @@ let titles_emerging = [
 
 let titles = titles_model + titles_method + titles_type + titles_ai_db + titles_db_core + titles_emerging;
 
-// ==================== 原有学者 + 新增数据库领域学者 ====================
+// ==================== Authors: Original + Database Experts ====================
 let authors_array = [
-    // 原有：AI领域大佬
+    // Original: AI Leaders
     "Yann LeCun", "Geoffrey Hinton", "Yoshua Bengio",
     
-    // 新增：数据库领域图灵奖得主 & 奠基人
+    // Database Turing Award Winners & Pioneers
     "Michael Stonebraker", "Jim Gray", "David DeWitt", "Hector Garcia-Molina",
     "Michael J. Carey", "Jeffrey D. Ullman", "Raghu Ramakrishnan",
     
-    // 新增：数据库系统 - 学术界大佬
+    // Database Systems - Academic Leaders
     "Samuel Madden", "Tim Kraska", "Andy Pavlo", "Anastasia Ailamaki",
     "Jignesh Patel", "Arun Kumar", "Immanuel Trummer", "Stratos Idreos",
     "Thomas Neumann", "Viktor Leis", "Peter Boncz", "Guoliang Li",
     "Feifei Li", "Lei Chen", "Xiaofang Zhou", "Wenfei Fan",
     
-    // 新增：Query Optimization & Learned Database
+    // Query Optimization & Learned Database
     "Guy Lohman", "Surajit Chaudhuri", "Vivek Narasayya", "Bolin Ding",
     "Ce Zhang", "Carsten Binnig", "Volker Markl", "Tilmann Rabl",
     
-    // 新增：AI + Database 交叉领域
+    // AI + Database Cross-domain
     "Ion Stoica", "Matei Zaharia", "Joseph Gonzalez", "Alvin Cheung",
-    "Xin Luna Dong", "Jiawei Han", "Haixun Wang", "Wei Wang",
-    
-    // 新增：中国数据库领域知名学者
-    "周傲英", "李国良", "李飞飞", "陈雷", "王珊", "杜小勇", "金培权"
+    "Xin Luna Dong", "Jiawei Han", "Haixun Wang", "Wei Wang"
 ];
 
-// ==================== 原有会议 + 新增数据库顶会顶刊 ====================
+// ==================== Conferences: Original + Database Top Venues ====================
 let conferences = [
     // AI
     "AAAI", "AAMAS", "ACM MM", "AISTATS", "ALT", "CEC", "ECAI", "FUZZ IEEE", "GECCO", "ICANN", "ICAPS", "ICCBR", "ICONIP", "ICRA", "ICTAI", "IJCAI", "IJCNN", "IROS", "KR", "KSEM", "SIGGRAPH", "STOC", "UAI", "PPSN", "PRICAI", "TAAI",
     // CV
     "3DV", "ACCV", "BMVC", "CVPR", "ECCV", "ICCV", "ICDAR", "ICIP", "ICME", "ICPR", "IEEE VIS", "MICCAI", "WACV",
-    // DM (已包含大部分数据库会议)
+    // DM (includes most database conferences)
     "AKBC", "APWeb", "CIKM", "DASFAA", "ECML-PKDD", "ICDE", "ICDM", "ICDT", "KDD", "LREC", "MDM", "PAKDD", "PODS", "RecSys", "SDM", "SIGMOD", "VLDB", "WSDM", "WWW", "EDBT", "CIDR",
     // IR
     "ECIR", "ESWC", "ICMR", "ICTIR", "ISWC", "SIGIR",
@@ -80,7 +77,7 @@ let conferences = [
     // Security
     "ACSA", "AsiaCCS", "CCS", "DSN", "ESORICS", "EuroS&P", "ICICS", "NDSS", "RAID", "SP", "USENIX Security",
     
-    // 新增：数据库顶刊
+    // Database Top Journals
     "TODS", "VLDB Journal", "TKDE", "SIGMOD Record"
 ];
 
