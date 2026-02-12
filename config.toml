@@ -1,7 +1,7 @@
 site_title = "MyArxiv"
 limit_days = 30
-# 使用上游缓存以保证构建通过；部署成功后可改为: https://nuerjibieke.github.io/MyArxiv/cache.json
-cache_url = "https://mlnlp-world.github.io/MyArxiv/cache.json"
+# 使用仓库自身的 Pages 缓存；初始可使用: https://nuerjibieke.github.io/MyArxiv/cache.json
+cache_url = "https://nuerjibieke.github.io/MyArxiv/cache.json"
 
 # ==================== 原有领域 ====================
 [[sources]]
@@ -29,26 +29,16 @@ limit = 100
 category = "cs.MM"
 title = "Multimedia"
 
-# ==================== 新增数据库相关领域 ====================
+# ==================== 新增数据库与 AI 相关领域 (合并以防频率限制) ====================
 [[sources]]
-limit = 100
-category = "cs.DB"
-title = "Databases"
-
-[[sources]]
-limit = 100
-category = "cs.AI"
-title = "Artificial Intelligence"
-
-[[sources]]
-limit = 100
-category = "cs.DC"
-title = "Distributed Computing"
+limit = 200
+category = "cs.DB OR cs.AI OR cs.DC"
+title = "DB & AI & DC"
 
 [[sources]]
 limit = 100
 category = "cs.AI AND (ti:agent OR ti:agents OR abs:agent OR abs:agents)"
-title = "AI Agents (Experimental)"
+title = "AI Agents"
 
 [scripts]
 highlight_title = "scripts/highlight_title.rhai"

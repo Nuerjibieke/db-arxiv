@@ -110,19 +110,19 @@
     </section>
     {{/each}}
 
+    <hr />
+    <footer>
+        <div>
+            <time id="build-timestamp" datetime="{{build_time}}">
+                {{!-- <a href="https://github.com/MLNLP-World/MyArxiv/actions">
+                    <img id="build-timestamp-badge" src="https://img.shields.io/github/workflow/status/mlnlp-world/myarxiv/Update?label={{time_format
+                        build_time " %F %T %Z"}}&style=for-the-badge" alt="{{time_format build_time " %F %T %Z"}}">
+                </a> --}}
+                {{time_format build_time "%F %T %Z"}}
+            </time>
+        </div>
+    </footer>
+    <script src="index.js"></script>
 </body>
-
-<footer>
-    <div>
-        <time id="build-timestamp" datetime="{{build_time}}">
-            {{!-- <a href="https://github.com/MLNLP-World/MyArxiv/actions">
-                <img id="build-timestamp-badge" src="https://img.shields.io/github/workflow/status/mlnlp-world/myarxiv/Update?label={{time_format
-                    build_time " %F %T %Z"}}&style=for-the-badge" alt="{{time_format build_time " %F %T %Z"}}">
-            </a> --}}
-            {{time_format build_time "%F %T %Z"}}
-        </time>
-    </div>
-</footer>
-<script src="index.js"></script>
 
 </html>
