@@ -3,17 +3,14 @@
 
 **数据库与核心系统（全面覆盖）**
 * `cs.DB`: 数据库 (Databases) —— 核心本行，每天拉取最新 100 篇
-* `cs.DC`: 分布式计算 (Distributed Computing) —— 分布式数据库的基础，最新 100 篇
-* `cs.MA`: 多智能体系统 (Multiagent Systems) —— Agent 核心，最新 100 篇
-
-**AI 与机器学习基础（精简去噪版）**
-*为了避免被海量不相关的 AI 论文淹没，以下领域每天只拉取**最新发布的 20 篇**，结合下方的高亮划重点词汇，帮你大浪淘沙：*
-* `cs.AI`: 人工智能基础 (Artificial Intelligence) —— 最新 20 篇
-* `cs.LG`: 机器学习 (Machine Learning) —— 最新 20 篇
-* `cs.CL`: 计算与语言/自然语言处理 (NLP) —— 大语言模型 (LLM)、Text-to-SQL 的核心地带，最新 20 篇
-
-**检索交叉**
-* `cs.IR`: 信息检索 (Information Retrieval) —— 向量数据库 (Vector DB)、RAG 检索增强技术的主阵地，最新 100 篇
+**其他所有领域（严格过滤版：只看顶会与顶级实验室/作者）**
+*为了最大程度减少噪音，除了核心数据库文章外，以下领域**只展示**出自顶级会议（如 NeurIPS, ICLR, KDD, SIGMOD 等）、顶级实验室（OpenAI, DeepMind, MSR, Meta AI）或由领军学者（如 Yann LeCun, Yoshua Bengio, Michael Stonebraker 等）发表的论文：*
+* `cs.DC`: 分布式计算 (Distributed Computing) —— 顶会/大佬直达，最新 50 篇
+* `cs.MA`: 多智能体系统 (Multiagent Systems) —— 顶会/大佬直达，最新 50 篇
+* `cs.IR`: 信息检索 (Information Retrieval) —— 顶会/大佬直达，最新 50 篇
+* `cs.AI`: 人工智能基础 (Artificial Intelligence) —— 顶会/大佬直达，最新 50 篇
+* `cs.LG`: 机器学习 (Machine Learning) —— 顶会/大佬直达，最新 50 篇
+* `cs.CL`: 计算与语言/自然语言处理 (NLP) —— 顶会/大佬直达，最新 50 篇
 Agent 专项搜索
 在 cs.AI 分类下，专门搜索标题或摘要中包含 agent、agents 或 agentic 的论文，确保不错过这一前沿方向。
 2. 自动高亮划重点的关键词 (Keywords)
