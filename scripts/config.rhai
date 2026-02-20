@@ -6,11 +6,13 @@ let titles_method = ["Pre-train", "Pretrain", "Prompt", "Self-Supervised"];
 // ==================== Database Research Keywords ====================
 // AI Native Database & Agent Database
 let titles_ai_db = [
-    "AI Native", "AI-Native", "Agent", "LLM", "ChatGPT",
+    "AI Native", "AI-Native", "Agent", "Agents", "Agentic", "Autonomous Agent", "Multi-Agent",
+    "LLM", "ChatGPT", "GPT-4", "Llama",
     "Text-to-SQL", "Text2SQL", "NL2SQL", "Natural Language to SQL",
     "Learned Index", "Learned Optimizer", "Learned Query", "Cardinality Estimation",
     "Vector Database", "Vector Search", "Embedding", "RAG", "Retrieval-Augmented",
-    "Foundation Model", "Large Language Model", "In-Context Learning"
+    "Foundation Model", "Large Language Model", "In-Context Learning",
+    "Task Planning", "ReAct", "Chain-of-Thought", "Agent Framework"
 ];
 
 // Database Core Tech Keywords
@@ -18,8 +20,9 @@ let titles_db_core = [
     "Query Optimization", "Query Processing", "Query Plan", "Cost Model",
     "Transaction", "ACID", "Concurrency Control", "MVCC", "Isolation",
     "Index", "B-Tree", "LSM-Tree", "Hash Index", "Bitmap Index",
-    "Storage Engine", "Buffer Pool", "Buffer Management", "WAL",
-    "Distributed Database", "Sharding", "Replication", "Consensus", "Raft", "Paxos"
+    "Storage Engine", "Buffer Pool", "Buffer Management", "WAL", "Log-Structured",
+    "Distributed Database", "Sharding", "Replication", "Consensus", "Raft", "Paxos",
+    "Storage Disaggregation", "Shared-Nothing", "Shared-Storage"
 ];
 
 // Emerging Database Tech
@@ -27,6 +30,7 @@ let titles_emerging = [
     "HTAP", "NewSQL", "NoSQL", "Time Series", "Graph Database", "Knowledge Graph",
     "Streaming", "Real-time", "In-Memory", "Serverless", "Cloud-Native",
     "Data Lake", "Lakehouse", "Data Warehouse", "OLAP", "OLTP",
+    "Durable Execution", "Workload Management", "Resource Management",
     "Benchmark", "TPC"
 ];
 
@@ -53,7 +57,12 @@ let authors_array = [
     
     // AI + Database Cross-domain
     "Ion Stoica", "Matei Zaharia", "Joseph Gonzalez", "Alvin Cheung",
-    "Xin Luna Dong", "Jiawei Han", "Haixun Wang", "Wei Wang"
+    "Xin Luna Dong", "Jiawei Han", "Haixun Wang", "Wei Wang",
+    "Mo Sha", "Bingsheng He", "Wook-Shin Han", "Kyuseok Shim",
+    
+    // AI Agents & LLM Systems
+    "Graham Neubig", "Jianfeng Gao", "Yoav Goldberg", "Denny Zhou",
+    "Jerry Liu", "Harrison Chase", "Shunyu Yao", "Lennon Cheng"
 ];
 
 // ==================== Conferences: Original + Database Top Venues ====================
