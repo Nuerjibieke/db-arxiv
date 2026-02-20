@@ -11,11 +11,6 @@ title = "Databases"
 
 [[sources]]
 limit = 100
-category = "cs.DS"
-title = "Data Structures and Algorithms"
-
-[[sources]]
-limit = 100
 category = "cs.AI"
 title = "Artificial Intelligence"
 

@@ -1,0 +1,49 @@
+1. 每日监听的论文大类 (Sources)
+你的系统每天会从以下 Arxiv 分类中各拉取最新的论文（每个分类最多 100 篇，Agent 专属搜索 500 篇）：
+
+数据库与数据结构基座
+cs.DB: 数据库 (Databases) —— 核心本行
+AI 与机器学习基础
+cs.AI: 人工智能基础 (Artificial Intelligence)
+cs.LG: 机器学习 (Machine Learning)
+大模型与检索交叉
+cs.CL: 计算与语言/自然语言处理 (NLP) —— 大语言模型 (LLM)、Text-to-SQL 的核心地带
+cs.IR: 信息检索 (Information Retrieval) —— 向量数据库 (Vector DB)、RAG 检索增强技术的主阵地
+分布式与智能体架构
+cs.DC: 分布式计算 (Distributed Computing) —— 分布式数据库的基础
+cs.MA: 多智能体系统 (Multiagent Systems)
+Agent 专项搜索
+在 cs.AI 分类下，专门搜索标题或摘要中包含 agent、agents 或 agentic 的论文，确保不错过这一前沿方向。
+2. 自动高亮划重点的关键词 (Keywords)
+当这些论文的标题出现在你的时间线上时，如果包含以下关键词，系统会自动为你标红/高亮，方便你一眼扫出重点：
+
+AI x Database 热门交叉词:
+Vector Database (向量数据库), RAG (检索增强), Embedding
+Text-to-SQL, NL2SQL (自然语言转 SQL)
+Learned Index (学习型索引), Learned Optimizer (学习型优化器)
+AI Native, Agent Database
+大模型与智能体 (LLM & Agent):
+LLM, ChatGPT, Foundation Model, In-Context Learning
+Agent, Autonomous Agent, Multi-Agent, ReAct, Chain-of-Thought
+数据库核心 (DB Core):
+Query Optimization (查询优化), Transaction (事务), ACID
+B-Tree, LSM-Tree, Buffer Pool
+Distributed Database (分布式数据库), Consensus, Raft/Paxos
+前沿数据架构:
+HTAP, NewSQL, Lakehouse (湖仓一体), Data Lake, Streaming
+3. 特别关注的顶会 (Conferences)
+如果论文被以下你该留意的顶会录用（会在 Comment 字段里带有这些信息），也会被醒目标出：
+
+数据库/数据挖掘顶流 (Tier 1): SIGMOD, VLDB, ICDE, PODS, KDD, CIDR
+AI/机器学习顶流: NeurIPS, ICLR, ICML, AAAI
+自然语言处理 (Text2SQL/LLM 首发地): ACL, EMNLP, NAACL
+信息检索 (RAG 核心区): SIGIR, WWW, WSDM
+系统架构 (搞底层 DB 必看): SOSP, OSDI, EuroSys
+4. 特别关注的作者 (Authors)
+当知名学者的论文发布时，作者名字也会被高亮。你的雷达目前锁定了：
+
+数据库图灵奖得主及泰斗: Michael Stonebraker, Jim Gray 等。
+现代系统/新一代数据库先锋: Tim Kraska (Learned Index), Andy Pavlo (CMU 数据库大佬), Samuel Madden, Thomas Neumann (数据库编译/Hyper) 等。
+AI 界巨头: Yann LeCun, Geoffrey Hinton, Yoshua Bengio 等。
+总结来说： 你现在的 Feed 就像一个自动化的 AI 助研，每天帮你在海量的计算机论文中，不仅盯紧了你的数据库本行，同时紧密跟踪了能与数据库技术结合的 AI、大模型和 Agent 的最新动向。每天扫一眼高亮词，很快就能培养出对领域趋势的直觉！
+
