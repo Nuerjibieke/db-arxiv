@@ -65,29 +65,28 @@ let authors_array = [
     "Jerry Liu", "Harrison Chase", "Shunyu Yao", "Lennon Cheng"
 ];
 
-// ==================== Conferences: Original + Database Top Venues ====================
+// ==================== Conferences: Database Top Venues & AI Conferences ====================
 let conferences = [
-    // AI
-    "AAAI", "AAMAS", "ACM MM", "AISTATS", "ALT", "CEC", "ECAI", "FUZZ IEEE", "GECCO", "ICANN", "ICAPS", "ICCBR", "ICONIP", "ICRA", "ICTAI", "IJCAI", "IJCNN", "IROS", "KR", "KSEM", "SIGGRAPH", "STOC", "UAI", "PPSN", "PRICAI", "TAAI",
-    // CV
-    "3DV", "ACCV", "BMVC", "CVPR", "ECCV", "ICCV", "ICDAR", "ICIP", "ICME", "ICPR", "IEEE VIS", "MICCAI", "WACV",
-    // DM (includes most database conferences)
-    "AKBC", "APWeb", "CIKM", "DASFAA", "ECML-PKDD", "ICDE", "ICDM", "ICDT", "KDD", "LREC", "MDM", "PAKDD", "PODS", "RecSys", "SDM", "SIGMOD", "VLDB", "WSDM", "WWW", "EDBT", "CIDR",
-    // IR
-    "ECIR", "ESWC", "ICMR", "ICTIR", "ISWC", "SIGIR",
-    // ML
-    "ACML", "ECML", "ICLR", "ICML", "ML4H", "NeurIPS", "NIPS",
-    // NLP
-    "AACL", "ACL", "CCL", "COLING", "COLT", "CoNLL", "EACL", "EMNLP", "ICASSP", "INTERSPEECH", "NAACL", "NLPCC", "RepL4NLP", "SIGDIAL", "SemEval", "WANLP", "WASSA", "WOAH",
-    // Arch
-    "ASPLOS", "ATC", "DATE", "EuroSys", "FAST", "HPCA", "ISCA", "MICRO", "PPoPP", "SC", "SoCC",
-    // System
-    "FSE/ESEC", "ICSE", "ISSTA", "OSDI", "SOSP",
-    // Security
-    "ACSA", "AsiaCCS", "CCS", "DSN", "ESORICS", "EuroS&P", "ICICS", "NDSS", "RAID", "SP", "USENIX Security",
+    // Top Database & Data Mining (Tier 1 & Recommended)
+    "SIGMOD", "VLDB", "ICDE", "PODS", "KDD", "CIDR", "EDBT", "SOCC",
     
-    // Database Top Journals
-    "TODS", "VLDB Journal", "TKDE", "SIGMOD Record"
+    // Core AI & ML (Tier 1 & Highly Relevant for DBxAI)
+    "NeurIPS", "NIPS", "ICLR", "ICML", "AAAI", "IJCAI", "KDD", "AISTATS",
+    
+    // NLP (Crucial for Large Language Models, Text2SQL)
+    "ACL", "EMNLP", "NAACL", "COLING", "EACL",
+    
+    // Information Retrieval (Relevant for Vector DBs, RAG)
+    "SIGIR", "WWW", "WSDM", "CIKM", "ECIR",
+    
+    // Systems & Architecture (Core DB Implementation)
+    "SOSP", "OSDI", "EuroSys", "FAST", "ATC", "ASPLOS", "ISCA", "MICRO", "HPCA",
+    
+    // Other related DM/DB
+    "ICDM", "SDM", "PAKDD", "DASFAA",
+    
+    // Database Top Journals (Shorthand representation in titles/abstracts)
+    "TODS", "VLDB Journal", "TKDE", "SIGMOD Record", "PVLDB"
 ];
 
 let start = conferences.shift();
