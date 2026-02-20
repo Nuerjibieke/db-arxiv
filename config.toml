@@ -12,32 +12,32 @@ title = "Databases (Core)"
 # --- Other Fields (Strictly Filtered by Top Venues, Labs, and Authors) ---
 # Filter matches: NeurIPS, ICLR, ICML, ACL, KDD, SIGMOD, VLDB, ICDE, OpenAI, DeepMind, Meta AI, MSR, and top DB/AI authors
 [[sources]]
-limit = 50
+limit = 200
 category = "cs.AI AND (all:\"NeurIPS\" OR all:\"ICLR\" OR all:\"ICML\" OR all:\"ACL\" OR all:\"KDD\" OR all:\"SIGMOD\" OR all:\"VLDB\" OR all:\"ICDE\" OR all:\"OpenAI\" OR all:\"DeepMind\" OR all:\"Microsoft Research\" OR all:\"Meta AI\" OR au:\"Michael Stonebraker\" OR au:\"Jiawei Han\" OR au:\"Yann LeCun\" OR au:\"Yoshua Bengio\" OR au:\"Geoffrey Hinton\" OR au:\"Tim Kraska\" OR au:\"Andy Pavlo\" OR au:\"Ion Stoica\" OR au:\"Matei Zaharia\" OR au:\"Guoliang Li\" OR au:\"Feifei Li\")"
 title = "Artificial Intelligence (Top Venues & Labs)"
 
 [[sources]]
-limit = 50
+limit = 200
 category = "cs.LG AND (all:\"NeurIPS\" OR all:\"ICLR\" OR all:\"ICML\" OR all:\"ACL\" OR all:\"KDD\" OR all:\"SIGMOD\" OR all:\"VLDB\" OR all:\"ICDE\" OR all:\"OpenAI\" OR all:\"DeepMind\" OR all:\"Microsoft Research\" OR all:\"Meta AI\" OR au:\"Michael Stonebraker\" OR au:\"Jiawei Han\" OR au:\"Yann LeCun\" OR au:\"Yoshua Bengio\" OR au:\"Geoffrey Hinton\" OR au:\"Tim Kraska\" OR au:\"Andy Pavlo\" OR au:\"Ion Stoica\" OR au:\"Matei Zaharia\" OR au:\"Guoliang Li\" OR au:\"Feifei Li\")"
 title = "Machine Learning (Top Venues & Labs)"
 
 [[sources]]
-limit = 50
+limit = 200
 category = "cs.CL AND (all:\"NeurIPS\" OR all:\"ICLR\" OR all:\"ICML\" OR all:\"ACL\" OR all:\"KDD\" OR all:\"SIGMOD\" OR all:\"VLDB\" OR all:\"ICDE\" OR all:\"OpenAI\" OR all:\"DeepMind\" OR all:\"Microsoft Research\" OR all:\"Meta AI\" OR au:\"Michael Stonebraker\" OR au:\"Jiawei Han\" OR au:\"Yann LeCun\" OR au:\"Yoshua Bengio\" OR au:\"Geoffrey Hinton\" OR au:\"Tim Kraska\" OR au:\"Andy Pavlo\" OR au:\"Ion Stoica\" OR au:\"Matei Zaharia\" OR au:\"Guoliang Li\" OR au:\"Feifei Li\")"
 title = "NLP / Computation and Language (Top Venues & Labs)"
 
 [[sources]]
-limit = 50
+limit = 200
 category = "cs.IR AND (all:\"NeurIPS\" OR all:\"ICLR\" OR all:\"ICML\" OR all:\"ACL\" OR all:\"KDD\" OR all:\"SIGMOD\" OR all:\"VLDB\" OR all:\"ICDE\" OR all:\"OpenAI\" OR all:\"DeepMind\" OR all:\"Microsoft Research\" OR all:\"Meta AI\" OR au:\"Michael Stonebraker\" OR au:\"Jiawei Han\" OR au:\"Yann LeCun\" OR au:\"Yoshua Bengio\" OR au:\"Geoffrey Hinton\" OR au:\"Tim Kraska\" OR au:\"Andy Pavlo\" OR au:\"Ion Stoica\" OR au:\"Matei Zaharia\" OR au:\"Guoliang Li\" OR au:\"Feifei Li\")"
 title = "Information Retrieval (Top Venues & Labs)"
 
 [[sources]]
-limit = 50
+limit = 200
 category = "cs.DC AND (all:\"NeurIPS\" OR all:\"ICLR\" OR all:\"ICML\" OR all:\"ACL\" OR all:\"KDD\" OR all:\"SIGMOD\" OR all:\"VLDB\" OR all:\"ICDE\" OR all:\"OpenAI\" OR all:\"DeepMind\" OR all:\"Microsoft Research\" OR all:\"Meta AI\" OR au:\"Michael Stonebraker\" OR au:\"Jiawei Han\" OR au:\"Yann LeCun\" OR au:\"Yoshua Bengio\" OR au:\"Geoffrey Hinton\" OR au:\"Tim Kraska\" OR au:\"Andy Pavlo\" OR au:\"Ion Stoica\" OR au:\"Matei Zaharia\" OR au:\"Guoliang Li\" OR au:\"Feifei Li\")"
 title = "Distributed Computing (Top Venues & Labs)"
 
 [[sources]]
-limit = 50
+limit = 200
 category = "cs.MA AND (all:\"NeurIPS\" OR all:\"ICLR\" OR all:\"ICML\" OR all:\"ACL\" OR all:\"KDD\" OR all:\"SIGMOD\" OR all:\"VLDB\" OR all:\"ICDE\" OR all:\"OpenAI\" OR all:\"DeepMind\" OR all:\"Microsoft Research\" OR all:\"Meta AI\" OR au:\"Michael Stonebraker\" OR au:\"Jiawei Han\" OR au:\"Yann LeCun\" OR au:\"Yoshua Bengio\" OR au:\"Geoffrey Hinton\" OR au:\"Tim Kraska\" OR au:\"Andy Pavlo\" OR au:\"Ion Stoica\" OR au:\"Matei Zaharia\" OR au:\"Guoliang Li\" OR au:\"Feifei Li\")"
 title = "Multiagent Systems (Top Venues & Labs)"
 
