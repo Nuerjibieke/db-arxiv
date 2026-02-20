@@ -1,7 +1,7 @@
 site_title = "MyArxiv"
 limit_days = 30
 # 使用上游缓存以保证构建通过；部署成功后可改为: https://nuerjibieke.github.io/MyArxiv/cache.json
-cache_url = "https://Nuerjibieke.github.io/db-arxiv/cache.json"
+# cache_url = "https://Nuerjibieke.github.io/db-arxiv/cache.json"
 
 # ==================== Database & AI Foundations ====================
 [[sources]]
