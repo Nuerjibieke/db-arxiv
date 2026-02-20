@@ -41,6 +41,11 @@ jobs:
               "$(cat asset.url)"
           tar -zxvf arxivfeed.tgz --strip-components 1 $(tar tf arxivfeed.tgz | grep /arxivfeed)
           chmod +x arxivfeed
+      - name: Workaround Arxiv HTTP 301 Redirect
+        run: |
+          sudo bash -c 'echo "127.0.0.1 export.arxiv.org" >> /etc/hosts'
+          sudo apt-get install -y socat
+          sudo socat TCP4-LISTEN:80,fork,reuseaddr OPENSSL:export.arxiv.org:443,verify=0,sni=export.arxiv.org &
       - name: Build rss
         run: ./arxivfeed
       - name: Deploy to GitHub Pages
