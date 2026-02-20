@@ -9,7 +9,7 @@ let titles_ai_db = [
     "AI Native", "AI-Native", "Agent", "Agents", "Agentic", "Autonomous Agent", "Multi-Agent",
     "LLM", "ChatGPT", "GPT-4", "Llama",
     "Text-to-SQL", "Text2SQL", "NL2SQL", "Natural Language to SQL",
-    "Learned Index", "Learned Optimizer", "Learned Query", "Cardinality Estimation",
+    "Cardinality Estimation",
     "Vector Database", "Vector Search", "Embedding", "RAG", "Retrieval-Augmented",
     "Foundation Model", "Large Language Model", "In-Context Learning",
     "Task Planning", "ReAct", "Chain-of-Thought", "Agent Framework"
