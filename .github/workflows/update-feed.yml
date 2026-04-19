@@ -6,20 +6,27 @@ on:
     branches:
       - main
   schedule:
-    # Adjust refresh schedule here. By default, it runs once per day.
+    # Run twice a day to improve odds of getting at least one successful refresh.
     # Syntax reference: https://docs.github.com/en/actions/reference/events-that-trigger-workflows#schedule
     # Recommended tool: https://crontab.guru/
     - cron: "12 5 * * *"
+    - cron: "42 11 * * *"
+
+concurrency:
+  group: update-feed-${{ github.ref }}
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Download ArxivFeed
+      - uses: actions/checkout@v4
+      - name: Build feed with retries
         env:
           GITHUB_PAT: ${{ github.token }}
           REPO: "NotCraft/ArxivFeed"
@@ -27,33 +34,17 @@ jobs:
           MATCH: "arxivfeed-.+-x86_64-unknown-linux-musl.tar.gz$"
           RENAME: "arxivfeed.tgz"
         shell: bash
-        run: |
-          curl -sL --fail \
-            -H "Accept: application/vnd.github.v3+json" \
-            -H "Authorization: Bearer ${GITHUB_PAT}" \
-              "https://api.github.com/repos/${REPO}/releases/${VERSION}" \
-              | jq -r ".assets | .[] | select(.name | test(\"${MATCH}\")) | .url" \
-              | tee asset.url
-          curl -sL --fail \
-            -H "Accept: application/octet-stream" \
-            -H "Authorization: Bearer ${GITHUB_PAT}" \
-              -o "${RENAME}" \
-              "$(cat asset.url)"
-          tar -zxvf arxivfeed.tgz --strip-components 1 $(tar tf arxivfeed.tgz | grep /arxivfeed)
-          chmod +x arxivfeed
-      - name: Workaround Arxiv HTTP 301 Redirect
-        run: |
-          ARXIV_IP=$(dig +short export.arxiv.org | tail -n 1)
-          if [ -z "$ARXIV_IP" ]; then ARXIV_IP="151.101.131.42"; fi
-          sudo apt-get install -y stunnel4
-          echo -e "client = yes\n[arxiv]\naccept = 127.0.0.1:80\nconnect = $ARXIV_IP:443\nsni = export.arxiv.org" | sudo tee /etc/stunnel/stunnel.conf
-          sudo stunnel4 /etc/stunnel/stunnel.conf
-          sleep 1
-          sudo bash -c 'echo "127.0.0.1 export.arxiv.org" >> /etc/hosts'
-      - name: Build rss
-        run: ./arxivfeed
+        run: bash .github/scripts/update-feed.sh
+      - name: Upload update logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: update-feed-logs-${{ github.run_id }}
+          path: logs/update-feed/
+          if-no-files-found: ignore
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        if: success() && github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./target
