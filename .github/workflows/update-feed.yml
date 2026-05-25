@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build feed with retries
         id: build_feed
-        continue-on-error: ${{ github.event_name == 'schedule' }}
+        continue-on-error: ${{ github.event_name != 'workflow_dispatch' }}
         env:
           GITHUB_PAT: ${{ github.token }}
           REPO: "NotCraft/ArxivFeed"
@@ -44,18 +44,18 @@ jobs:
           name: update-feed-logs-${{ github.run_id }}
           path: logs/update-feed/
           if-no-files-found: ignore
-      - name: Summarize scheduled failure without failing the workflow
-        if: github.event_name == 'schedule' && steps.build_feed.outcome == 'failure'
+      - name: Summarize tolerated update failure
+        if: github.event_name != 'workflow_dispatch' && steps.build_feed.outcome == 'failure'
         run: |
           {
-            echo "## Scheduled update did not refresh today"
+            echo "## Automatic update did not refresh on this run"
             echo
             echo "The previous published site is still kept as-is."
             echo "Logs were uploaded as an artifact for debugging."
-            echo "This scheduled run is intentionally left green to avoid failure email noise."
+            echo "This run is intentionally left green to avoid failure email noise."
           } >> "$GITHUB_STEP_SUMMARY"
-      - name: Fail non-scheduled runs if the update step failed
-        if: github.event_name != 'schedule' && steps.build_feed.outcome == 'failure'
+      - name: Fail manual runs if the update step failed
+        if: github.event_name == 'workflow_dispatch' && steps.build_feed.outcome == 'failure'
         run: exit 1
       - name: Deploy to GitHub Pages
         if: steps.build_feed.outcome == 'success' && github.ref == 'refs/heads/main'
