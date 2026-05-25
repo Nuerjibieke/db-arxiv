@@ -27,6 +27,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build feed with retries
+        id: build_feed
+        continue-on-error: ${{ github.event_name == 'schedule' }}
         env:
           GITHUB_PAT: ${{ github.token }}
           REPO: "NotCraft/ArxivFeed"
@@ -36,14 +38,27 @@ jobs:
         shell: bash
         run: bash .github/scripts/update-feed.sh
       - name: Upload update logs on failure
-        if: failure()
+        if: steps.build_feed.outcome == 'failure'
         uses: actions/upload-artifact@v4
         with:
           name: update-feed-logs-${{ github.run_id }}
           path: logs/update-feed/
           if-no-files-found: ignore
+      - name: Summarize scheduled failure without failing the workflow
+        if: github.event_name == 'schedule' && steps.build_feed.outcome == 'failure'
+        run: |
+          {
+            echo "## Scheduled update did not refresh today"
+            echo
+            echo "The previous published site is still kept as-is."
+            echo "Logs were uploaded as an artifact for debugging."
+            echo "This scheduled run is intentionally left green to avoid failure email noise."
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Fail non-scheduled runs if the update step failed
+        if: github.event_name != 'schedule' && steps.build_feed.outcome == 'failure'
+        run: exit 1
       - name: Deploy to GitHub Pages
-        if: success() && github.ref == 'refs/heads/main'
+        if: steps.build_feed.outcome == 'success' && github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
